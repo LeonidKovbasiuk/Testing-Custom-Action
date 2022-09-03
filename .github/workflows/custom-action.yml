@@ -7,4 +7,4 @@ jobs:
     - uses: action/checkout@v1
     - uses: LeonidKovbasiuk/custom-action@master
     env:
-      GITHUB_TOKEN: ${{secret.PERSONAL_TOKEN}}
+      GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
