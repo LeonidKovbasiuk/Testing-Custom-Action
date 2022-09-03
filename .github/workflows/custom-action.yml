@@ -1,4 +1,4 @@
-name: usdig custom action
+name: usig custom action
 on: [push]
 jobs:
   build: 
