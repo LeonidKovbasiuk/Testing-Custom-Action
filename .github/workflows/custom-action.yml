@@ -1,4 +1,4 @@
-name: usig custom action
+name: Usig custom action
 on: [push]
 jobs:
   build: 
