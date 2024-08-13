@@ -1,6 +1,6 @@
 env:
   SHOULD_PUBLISH: 'true'
-  IS_RELEASE: 'false'
+  IS_RELEASE: 'true'
 name: Usig custom action
 on: [push]
 jobs:
