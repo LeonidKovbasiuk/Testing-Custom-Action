@@ -1,3 +1,6 @@
+env:
+  SHOULD_PUBLISH: 'true'
+  IS_RELEASE: 'false'
 name: Usig custom action
 on: [push]
 jobs:
@@ -5,6 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - uses: LeonidKovbasiuk/custom-action@v1.0.2
+    - name: test
+      if: ${{ env.SHOULD_PUBLISH == 'true' && env.IS_RELEASE == 'false'}}
+      run: echo "Ok!"
     env:
       GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
