@@ -21,4 +21,4 @@ jobs:
           echo "TEST_ENVIRONMENT_NAME=${TEST_ENVIRONMENT_NAME}" >> $GITHUB_OUTPUT 
 
       - name: Test env
-        run: echo environmentName=${{ env.TEST_ENVIRONMENT_NAME }}
+        run: echo environmentName=${TEST_ENVIRONMENT_NAME}
