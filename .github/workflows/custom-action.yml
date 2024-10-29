@@ -18,7 +18,7 @@ jobs:
         id: deploy-test-environment
         run: |
           TEST_ENVIRONMENT_NAME="fcp-auto-testing"
-          echo "TEST_ENVIRONMENT_NAME=${TEST_ENVIRONMENT_NAME}" >> $GITHUB_OUTPUT 
+          echo "TEST_ENVIRONMENT_NAME=${TEST_ENVIRONMENT_NAME}" >> $GITHUB_ENV 
 
       - name: Test env
         run: echo environmentName=${TEST_ENVIRONMENT_NAME}
