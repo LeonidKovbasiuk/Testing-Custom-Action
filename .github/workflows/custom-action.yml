@@ -16,4 +16,5 @@ jobs:
 
       - name: test gh cli install
         uses: actions4gh/setup-gh@v1
+      - name: test run gh
         run: gh version
