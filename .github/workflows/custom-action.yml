@@ -7,9 +7,18 @@ jobs:
   build: 
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: test
-      if: ${{ env.SHOULD_PUBLISH == 'true' && env.IS_RELEASE == 'false'}}
-      run: echo $(git rev-parse --short HEAD)
-    env:
-      GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      - uses: actions/checkout@v2
+      - name: test
+        if: ${{ env.SHOULD_PUBLISH == 'true' && env.IS_RELEASE == 'false'}}
+        run: echo $(git rev-parse --short HEAD)
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
+      - name: Build TEST environment name
+        id: deploy-test-environment
+        run: |
+          TEST_ENVIRONMENT_NAME="fcp-auto-testing"
+          echo "TEST_ENVIRONMENT_NAME=${TEST_ENVIRONMENT_NAME}" >> $GITHUB_OUTPUT 
+
+      - name: Test env
+        run: echo environmentName=${{ env.TEST_ENVIRONMENT_NAME }}
