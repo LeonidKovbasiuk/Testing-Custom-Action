@@ -4,7 +4,10 @@ jobs:
   build: 
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - uses: LeonidKovbasiuk/custom-action@v1.0.2
+    - name: Checkout
+      uses: actions/checkout@v2
+      
+    - name: Run Action
+      uses: LeonidKovbasiuk/custom-action@v1.0.2
     env:
       GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
