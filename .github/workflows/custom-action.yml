@@ -4,7 +4,6 @@ jobs:
   build: 
     runs-on: ubuntu-latest
     steps:
-# some comment
     - uses: actions/checkout@v2
     - uses: LeonidKovbasiuk/custom-action@v1.0.2
     env:
