@@ -14,11 +14,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
           
-      - uses: sersoft-gmbh/setup-gh-cli-action@v2
-        with:
-          version: stable
+      - name: Malware Scan
+        uses: LeonidKovbasiuk/clamav-scan@main
         
-      - name: test run gh
-        run: |
-          gh version
-          sleep 200
