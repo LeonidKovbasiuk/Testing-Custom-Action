@@ -17,5 +17,5 @@ jobs:
       - name: Malware Scan
         uses: LeonidKovbasiuk/clamav-scan@main
         with:
-          logfile: clamav-scan.log
+          logfile: .github/clamav-scan.log
         
